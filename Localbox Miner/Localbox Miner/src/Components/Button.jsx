@@ -7,8 +7,8 @@ const Button =()=>{
     const {themeupdaterfunction,theme}=useContext(themecontext)
   return (
     <div>
-      <button style={{marginTop:"5px",backgroundColor:theme=="light"?"white":"black",color:theme=="light"?"black":"white"}} onClick={themeupdaterfunction}>
-       {theme=="light"?<FaMoon />:<FaSun />}</button>  
+      <button style={{marginTop:"5px",backgroundColor:theme?"white":"black",color:theme?"black":"white"}} onClick={themeupdaterfunction}>
+       {theme?<FaSun /> : <FaMoon />}</button>  
     </div>
     )
 }

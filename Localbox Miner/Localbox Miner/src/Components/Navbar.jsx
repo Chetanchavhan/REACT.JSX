@@ -3,6 +3,7 @@ import { themecontext } from '../Context/Themecontex';
 import { authcontex } from '../Context/Authcontex';
 
 function Navbar() {
+  const [text,settext] = useState(false)
   const {theme}=useContext(themecontext)
   const {isauth ,loginfuction,logoutfuction}=useContext(authcontex)
 
@@ -16,20 +17,20 @@ function Navbar() {
   };
 
   const titleStyle = {
-    color:  theme=="light"?'#333':"white",
+    color:  theme?'#333':"white",
     fontSize: '24px',
     marginBottom: '5px'
   };
 
   const subtitleStyle = {
-    color:theme=='light'?"#666":"white",
+    color:theme?"#666":"white",
     fontSize: '16px'
   };
 
   return (
     <div style={navbarStyle}>
       <h1 style={titleStyle}>Navbar</h1>
-      <h3 style={subtitleStyle}>The Theme is Light</h3>
+      <h3 style={subtitleStyle} >The Theme is {theme ?  "Light" : "Dark" }</h3>
        <h2>user is login:{isauth ?"yes":"no"}</h2> 
       <button onClick={loginfuction} >login</button>
       <button onClick={logoutfuction} >logout</button>

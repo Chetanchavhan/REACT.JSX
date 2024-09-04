@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { themecontext } from '../Context/Themecontex';
 
 function Mainsec() {
+  const {themeupdaterfunction,theme}=useContext(themecontext)
   const divStyle = 
   {
     padding: '20px',
