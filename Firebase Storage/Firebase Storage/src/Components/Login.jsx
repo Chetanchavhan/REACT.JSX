@@ -10,7 +10,7 @@ const Login = () => {
   };
   const handleLogout = () => {
     signOut(auth)
-      // eslint-disable-next-line no-unused-vars
+     
       .then((res) => {
         alert("logout");
       })
